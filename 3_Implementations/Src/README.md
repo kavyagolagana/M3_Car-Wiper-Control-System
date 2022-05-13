@@ -27,7 +27,7 @@
 
 int main()
 {
-	int j,c=0,k=0;  //Declaring and Initilizing Variables
+	int i,b=0,j=0;  //Declaring and Initilizing Variables
 	RCC_AHB1ENR |= (1<<3)|(1<<0); //Enabling the LED and the switch
 	GPIOD_MODE = 0; //For Clear LED
 	GPIOA_MODE = 0; //For Clear Switch
@@ -42,94 +42,94 @@ int main()
 	{
 					while((GPIOA_IDR & 0x01) == 1) // Switch Status On
 					{
-						c++; //Increment for Switch
+						b++; //Increment for Switch
 					}
-					if(c>30000)
+					if(b>30000)
 				    {
-					c=0;//RED Led should be in ON state
+					b=0;//RED Led should be in ON state
 					GPIOD_ODR |= 1<<14;
-					for(j=0;j<100000;j++);
+					for(i=0;i<100000;i++);
 					}
-					else if(c>0 && c<30000)
+					else if(b>0 && b<30000)
 					{
-					k=1;
+					j=1;
                     }
 					else
 					{
 
 					}
-						if(k==1)
+						if(j==1)
 						{
 
 					    //By using Fast Frequency delay
 
-				        for(k=0;k<5;k++) //For LED GREEN
+				        for(j=0;j<5;j++) //For LED GREEN
 						{
 						GPIOD_ODR |= 1<<12;
-						for(j=0;j<20000;j++);
+						for(i=0;i<20000;i++);
 						GPIOD_ODR &= ~(1<<12);
-						for(j=0;j>=20000;j++);
+						for(i=0;i>=20000;i++);
 						}
-						for(k=0;k<5;k++)  //For LED ORANGE
+						for(j=0;j<5;j++)  //For LED ORANGE
 						{
 						GPIOD_ODR |= 1<<13;
-						for(j=0;j<20000;j++);
+						for(i=0;i<20000;i++);
 						GPIOD_ODR &= ~(1<<13);
-					    for(j=0;j>=20000;j++);
+					    for(i=0;i>=20000;i++);
 						}
-						for(k=0;k<5;k++)   //For LED BLUE
+						for(j=0;j<5;j++)   //For LED BLUE
 						{
 						GPIOD_ODR |= 1<<15;
-						for(j=0;j<20000;j++);
+						for(i=0;i<20000;i++);
 						GPIOD_ODR &= ~(1<<15);
-						for(j=0;j>=20000;j++);
+						for(i=0;i>=20000;i++);
 						}
 
 						//Medium Speed Delay
 
-						for(k=0;k<5;k++)  //For LED GREEN
+						for(j=0;j<5;j++)  //For LED GREEN
 						{
 						GPIOD_ODR |= 1<<12;
-						for(j=0;j<40000;j++);
+						for(i=0;i<40000;i++);
 						GPIOD_ODR &= ~(1<<12);
-						for(j=0;j>=40000;j++);
+						for(i=0;i>=40000;i++);
 						}
-						for(k=0;k<5;k++)  //For LED ORANGE
+						for(j=0;j<5;j++)  //For LED ORANGE
 						{
 						GPIOD_ODR |= 1<<13;
-						for(j=0;j<40000;j++);
+						for(i=0;i<40000;i++);
 						GPIOD_ODR &= ~(1<<13);
-						for(j=0;j>=40000;j++);
+						for(i=0;i>=40000;i++);
 						}
-						for(k=0;k<5;k++)  //For LED BLUE
+						for(j=0;j<5;j++)  //For LED BLUE
 						{
 						GPIOD_ODR |= 1<<15;
-						for(j=0;j<40000;j++);
+						for(i=0;i<40000;i++);
 					    GPIOD_ODR &= ~(1<<15);
-						for(j=0;j>=40000;j++);
+						for(i=0;i>=40000;i++);
 						}
 						//High Speed Delay
 
-						for(k=0;k<5;k++)  //For LED GREEN
+						for(j=0;j<5;j++)  //For LED GREEN
 					    {
 						GPIOD_ODR |= 1<<12;
-						for(j=0;j<80000;j++);
+						for(i=0;i<80000;i++);
 						GPIOD_ODR &= ~(1<<12);
-						for(j=0;j>=80000;j++);
+						for(i=0;i>=80000;i++);
 						}
-						for(k=0;k<5;k++)  //For LED ORANGE
+						for(j=0;j<5;j++)  //For LED ORANGE
 						{
 						GPIOD_ODR |= 1<<13;
-						for(j=0;j<80000;j++);
+						for(i=0;i<80000;i++);
 						GPIOD_ODR &= ~(1<<13);
-						for(j=0;j>=80000;j++);
+						for(i=0;i>=80000;i++);
 						}
-						for(k=0;k<5;k++)  //For LED BLUE
+						for(j=0;j<5;j++)  //For LED BLUE
 						{
 						GPIOD_ODR |= 1<<15;
-						for(j=0;j<80000;j++);
+						for(i=0;i<80000;i++);
 						GPIOD_ODR &= ~(1<<15);
-						for(j=0;j>=80000;j++);
+						for(i=0;i>=80000;i++);
 						}
 
 						}
