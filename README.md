@@ -4,4 +4,6 @@
 # Code quality score
 ![code quality score](https://api.codiga.io/project/33328/score/svg)
 # CppcheckAnalyse
-[![Cppcheck Analyse](https://github.com/kavyagolagana/M2_LDR_Sensor/actions/workflows/Cppcheck_Analyse.yml/badge.svg)](https://github.com/kavyagolagana/M2_LDR_Sensor/actions/workflows/Cppcheck_Analyse.yml)
+[![Cppcheck Analyse](https://github.com/kavyagolagana/M3_Wiper-Control-System/actions/workflows/Cppcheck_Analyse.yml/badge.svg)](https://github.com/kavyagolagana/M3_Wiper-Control-System/actions/workflows/Cppcheck_Analyse.yml)
+# Build on Linux
+[![Build-Linux](https://github.com/kavyagolagana/M3_Wiper-Control-System/actions/workflows/Build%20on%20linux.yml/badge.svg)](https://github.com/kavyagolagana/M3_Wiper-Control-System/actions/workflows/Build%20on%20linux.yml)
